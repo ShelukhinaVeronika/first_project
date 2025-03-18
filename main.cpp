@@ -1,9 +1,17 @@
 #include <iostream>
 
-std::string hello(){
-return "Hello, World!";
+class Hello{
+public:
+Hello(std::string msg) : message(msg){}
+void hello(){
+std::cout<<message;
 }
 
+private:
+std::string message;
+};
+
 int main(){
-std::cout << hello();
+Hello hello("Hello, World!");
+hello.hello();
 }
