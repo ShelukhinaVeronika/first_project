@@ -1,5 +1,9 @@
 #include <iostream>
 
+std::string hello(){
+return "Hello, World!";
+}
+
 int main(){
-std::cout << "Hello, World!";
+std::cout << hello();
 }
