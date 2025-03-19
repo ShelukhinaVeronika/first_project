@@ -1,21 +1,26 @@
 #include <iostream>
 using namespace std;
 
-int fib(int n) {
-    if (n == 1) {
-        return 0;
+void fib_iterative(int n) {
+    int a = 0, b = 1;
+    if (n >= 1) {
+        cout << a << endl;
     }
-    else if (n == 2) {
-        return 1;
+    if (n >= 2) {
+        cout << b << endl;
     }
-    else {
-        return fib(n - 1) + fib(n - 2);
+
+    for (int i = 3; i <= n; ++i) {
+        int next_n = a + b;
+        cout << next_n << endl;
+        a = b;
+        b = next_n;
     }
 }
 
 int main() {
     int n;
     cin >> n;
-    cout << fib(n) << endl;
+    fib_iterative(n);
     return 0;
 }
